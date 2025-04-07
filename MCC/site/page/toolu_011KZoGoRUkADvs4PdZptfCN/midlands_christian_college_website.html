@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from page.genspark.site/page/toolu_011KZoGoRUkADvs4PdZptfCN/midlands_christian_college_website.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 10:43:26 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midlands Christian College - Gweru, Zimbabwe</title>
+    <link href="../../../cdn.jsdelivr.net/npm/tailwindcss%402.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../../../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%406.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f2756;
+            --secondary: #d4af37;
+            --tertiary: #f8f8f8;
+            --accent: #2a4d7f;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary);
+        }
+        
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .text-secondary {
+            color: var(--secondary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c09d2a;
+            transform: translateY(-2px);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item {
+            padding-left: 2rem;
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+        }
+        
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-slider {
+            position: relative;
+            height: 85vh;
+            overflow: hidden;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .accordion-header {
+            cursor: pointer;
+            padding: 1rem;
+            background-color: var(--tertiary);
+            border-radius: 0.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+            padding: 1rem;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            background: var(--primary);
+            z-index: 1001;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            padding: 2rem;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero-slider {
+                height: 60vh;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .news-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .news-card-content {
+            flex: 1;
+            padding: 1.5rem;
+        }
+        
+        .news-date {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem 0.25rem 0 0;
+            font-weight: 600;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        
+        .tab-button.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="bg-primary text-white">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="mr-4">
+                    <div class="text-2xl font-bold">MCC</div>
+                    <div class="text-xs">Est. 1987</div>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold">Midlands Christian College</div>
+                    <div class="text-xs">Excellence in Christian Education</div>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-1">
+                <a href="tel:+263254222930" class="text-white px-2 py-1 text-sm flex items-center">
+                    <i class="fas fa-phone mr-1"></i> +263 254 222 4930
+                </a>
+                <a href="https://page.genspark.site/cdn-cgi/l/email-protection#7312171e1a1d331e10105d12105d0904" class="text-white px-2 py-1 text-sm flex items-center">
+                    <i class="fas fa-envelope mr-1"></i> <span class="__cf_email__" data-cfemail="6c0d080105022c010f0f420d0f42161b">[email&#160;protected]</span>
+                </a>
+            </div>
+        </div>
+        <nav class="bg-accent">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <ul class="desktop-menu hidden md:flex space-x-6">
+                    <li><a href="#home" class="text-white hover:text-secondary">Home</a></li>
+                    <li><a href="#about" class="text-white hover:text-secondary">About Us</a></li>
+                    <li><a href="#academics" class="text-white hover:text-secondary">Academics</a></li>
+                    <li><a href="#admissions" class="text-white hover:text-secondary">Admissions</a></li>
+                    <li><a href="#boarding" class="text-white hover:text-secondary">Boarding Life</a></li>
+                    <li><a href="#sports" class="text-white hover:text-secondary">Sports</a></li>
+                    <li><a href="#culture" class="text-white hover:text-secondary">Cultural</a></li>
+                    <li><a href="#spiritual" class="text-white hover:text-secondary">Spiritual Life</a></li>
+                    <li><a href="#news" class="text-white hover:text-secondary">News</a></li>
+                    <li><a href="#contact" class="text-white hover:text-secondary">Contact</a></li>
+                </ul>
+                <button class="menu-toggle md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="flex justify-end mb-4">
+            <button class="close-menu text-white text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="#home" class="text-white block py-2">Home</a></li>
+            <li><a href="#about" class="text-white block py-2">About Us</a></li>
+            <li><a href="#academics" class="text-white block py-2">Academics</a></li>
+            <li><a href="#admissions" class="text-white block py-2">Admissions</a></li>
+            <li><a href="#boarding" class="text-white block py-2">Boarding Life</a></li>
+            <li><a href="#sports" class="text-white block py-2">Sports</a></li>
+            <li><a href="#culture" class="text-white block py-2">Cultural</a></li>
+            <li><a href="#spiritual" class="text-white block py-2">Spiritual Life</a></li>
+            <li><a href="#news" class="text-white block py-2">News</a></li>
+            <li><a href="#contact" class="text-white block py-2">Contact</a></li>
+        </ul>
+        <div class="mt-8 space-y-4">
+            <div class="flex items-center text-white">
+                <i class="fas fa-phone mr-3"></i>
+                <span>+263 254 222 4930</span>
+            </div>
+            <div class="flex items-center text-white">
+                <i class="fas fa-envelope mr-3"></i>
+                <span><a href="https://page.genspark.site/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1273767f7b7c527f71713c73713c6865">[email&#160;protected]</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/Sports-Day-11-1-scaled-1366x520.jpg')">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Staying Relevant</h1>
+                <p class="text-xl mb-8">Learning through all seasons to equip our pupils for their next step.</p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+                    <a href="#about" class="btn-primary">Learn More</a>
+                    <a href="#admissions" class="btn-secondary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/DSC_6954-scaled-e1728908239970-1366x520.jpg')">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Focused Eagles</h1>
+                <p class="text-xl mb-8">MCC's culture is that students should work towards achieving one's personal best</p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+                    <a href="#academics" class="btn-primary">Our Academics</a>
+                    <a href="#admissions" class="btn-secondary">Join Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/DSC_6550-scaled-e1728909355844-1366x520.jpg')">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Vibrant Programmes</h1>
+                <p class="text-xl mb-8">At MCC you will not only learn your potential but you will be supported to achieve it</p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+                    <a href="#sports" class="btn-primary">Sports & Culture</a>
+                    <a href="#spiritual" class="btn-secondary">Spiritual Life</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Welcome to Midlands Christian College</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+                <p class="text-lg md:w-2/3 mx-auto">
+                    Midlands Christian College (MCC) is a private, internationally accredited, co-educational Christian high school 
+                    located in the Midlands province of Zimbabwe. A member of the ATS-CHISZ Schools group and the Association of 
+                    Christian Schools International, this co-educational school has been offering quality education to pupils since 1987.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Academic Excellence</h3>
+                    <p>Our broad and balanced curriculum is designed to meet the needs of pupils with varying abilities.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-cross text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Christian Values</h3>
+                    <p>We are committed to raising the type of student detailed in our Eagles Creed, with Christ at the center.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Holistic Development</h3>
+                    <p>We focus on academic, physical, spiritual, and social development of each student.</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="p-6 bg-primary text-white rounded-lg inline-block">
+                    <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+                    <p class="text-lg italic">
+                        "Teach the Lord's way;<br>
+                        Our Students our Reason;<br>
+                        To do the best we can with what God has given us."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="section-title text-3xl md:text-4xl">About Midlands Christian College</h2>
+                    <p class="mb-4">
+                        Midlands Christian College was founded in 1987 to offer quality education to the Gweru community. Located in the Midlands province
+                        of Zimbabwe, MCC has grown to become one of the leading educational institutions in the country.
+                    </p>
+                    <p class="mb-4">
+                        As a private co-educational high school with approximately 450 students from Form 1 to Form 6, we provide 
+                        both boarding facilities and day-scholar options. Our campus is situated in New Christmas Gift, Gweru, Zimbabwe.
+                    </p>
+                    <p class="mb-4">
+                        We are proud to be a member of the Association of Trust Schools (ATS) and the Association of 
+                        Christian Schools International (ACSI), which ensures we maintain high standards in both academics and character development.
+                    </p>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-3">Our Values</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Faith:</strong> Christ-centered education that integrates biblical principles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Excellence:</strong> Commitment to high academic standards and personal growth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Integrity:</strong> Developing honest, ethical, and responsible citizens</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Community:</strong> Fostering a supportive and inclusive environment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                <span><strong>Service:</strong> Encouraging students to contribute positively to society</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/11/Collaborative-Learning-DSC_0122.jpg" alt="Midlands Christian College" class="rounded-lg shadow-lg w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 shadow-lg rounded-lg">
+                            <div class="flex space-x-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">36+</div>
+                                    <div class="text-sm">Years of Excellence</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">450+</div>
+                                    <div class="text-sm">Students</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">100%</div>
+                                    <div class="text-sm">Committed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-16 bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">The Eagle's Creed</h3>
+                        <p class="italic">
+                            "As an MCC Eagle, I commit to academic excellence, Christian character, and service to my community. 
+                            I will soar above challenges, demonstrate integrity in all I do, and use my God-given talents to honor Him and benefit others."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Academic Excellence</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Our Curriculum</h3>
+                    <p class="mb-4">
+                        Midlands Christian College provides a broad and balanced curriculum designed to meet the needs of our pupils with varying abilities. Within this framework, one of our Expected Outcomes is, with Christ as the centre of truth, to develop pupils who have qualifications in English, Mathematics, Science and Computing.
+                    </p>
+                    <p>
+                        Our academic program is overseen by the Vice Principal and Director of Academics, working with a well-qualified team of Subject Managers who manage the day-to-day running of their subjects.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Examination Boards</h3>
+                    <p class="mb-4">
+                        Pupils can sit for examinations under the following examination boards:
+                    </p>
+                    <ul class="list-disc pl-6 mb-4">
+                        <li>Cambridge</li>
+                        <li>ZIMSEC</li>
+                        <li>DELF DALF</li>
+                        <li>HSK (Chinese)</li>
+                        <li>London College of Music</li>
+                    </ul>
+                    <p>
+                        Additionally, all pupils sit for the International Computer Driving Licence (ICDL) under the Zimbabwe Computer Society.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-primary">Academic Offerings</h3>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold mb-3 flex items-center">
+                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2">1</span>
+                        Subjects Offered at Junior Level
+                    </h4>
+                    <p class="mb-2">
+                        English Language, Shona, French, Ndebele, Mandarin, Combined Science, Religious Studies, Geography, History, Mathematics, Commerce, Music, Physical Education
+                    </p>
+                    <p>
+                        Pupils are required to choose one technical option subject from: Art and Design; Agriculture; Design and Technology (Graphic Products, or Resistant Materials) or Fashion and Textiles.
+                    </p>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold mb-3 flex items-center">
+                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2">2</span>
+                        Subjects Offered at IGCSE Level
+                    </h4>
+                    <p>
+                        English as a First Language; English Literature; Core Mathematics; Extended Mathematics; Additional Mathematics, Combined Science; Physical Science; Core Biology; Extended Biology; Chemistry; Physics; Geography; History; Accounting; Commerce; Religious Studies; Physical Education; French; Chinese and Shona.
+                    </p>
+                    <p class="mt-2">
+                        Pupils continue with the one technical option subject which they started at the junior level.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-3 flex items-center">
+                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2">3</span>
+                        Subjects Offered at AS Level and A Level
+                    </h4>
+                    <p>
+                        Mathematics; Chemistry; Biology; Physics; History; Geography; Divinity; English Literature; English Language; Art and Design; Fashion and Design; Design and Technology; Business Studies; Accounting; Economics; Computer Science; Chinese; French; Travel and Tourism.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Computer Literacy</h3>
+                    <p class="mb-4">
+                        At MCC we offer comprehensive computer literacy modules including:
+                    </p>
+                    <ul class="list-disc pl-6">
+                        <li>Computer Essentials – essential concepts and skills relating to device use and file management</li>
+                        <li>Word Processing – creating, formatting, and finishing documents</li>
+                        <li>Spreadsheets – developing, formatting, and using spreadsheets</li>
+                        <li>Presentation – creating and formatting presentations</li>
+                        <li>Online Essentials – web browsing concepts and online communication</li>
+                    </ul>
+                </div>
+                
+                <div class="md:w-1/2 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Academic Achievements</h3>
+                    <p class="mb-4">
+                        MCC has a strong tradition of academic excellence, with consistently outstanding results in both national and international examinations.
+                    </p>
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <span>High pass rates in Cambridge and ZIMSEC examinations</span>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <span>Multiple distinctions in A-Level subjects</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span>Graduates accepted into prestigious universities worldwide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Admissions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card">
+                    <div class="bg-primary py-4 px-6 rounded-t-lg">
+                        <h3 class="text-xl font-semibold text-white">Form 1 Admissions</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">
+                            Parents are advised to apply for Form One when their child/children are nearing the end of Grade 6 or in the first term of Grade 7.
+                        </p>
+                        <h4 class="font-semibold mb-2">Requirements:</h4>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Completed application form</li>
+                            <li>Recent school reports</li>
+                            <li>Birth certificate copy</li>
+                            <li>Passport-sized photographs</li>
+                            <li>Application fee payment</li>
+                        </ul>
+                        <a href="#" class="btn-primary block text-center">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="bg-primary py-4 px-6 rounded-t-lg">
+                        <h3 class="text-xl font-semibold text-white">Form 2-4 Admissions</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">
+                            Admission to these forms depends on available places and is subject to an entrance assessment and review of previous academic records.
+                        </p>
+                        <h4 class="font-semibold mb-2">Requirements:</h4>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Completed application form</li>
+                            <li>Recent school reports</li>
+                            <li>Reference letter from current school</li>
+                            <li>Birth certificate copy</li>
+                            <li>Passport-sized photographs</li>
+                            <li>Application fee payment</li>
+                        </ul>
+                        <a href="#" class="btn-primary block text-center">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="bg-primary py-4 px-6 rounded-t-lg">
+                        <h3 class="text-xl font-semibold text-white">A-Level Admissions</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">
+                            Entry into Lower 6 requires a minimum of 5 O-Level passes at grade C or better, including English Language and Mathematics.
+                        </p>
+                        <h4 class="font-semibold mb-2">Requirements:</h4>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Completed application form</li>
+                            <li>O-Level results/certificates</li>
+                            <li>Recent school reports</li>
+                            <li>Reference letter from current school</li>
+                            <li>Birth certificate copy</li>
+                            <li>Passport-sized photographs</li>
+                            <li>Application fee payment</li>
+                        </ul>
+                        <a href="#" class="btn-primary block text-center">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-6 text-primary">Admission Process</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">Step 1: Submit Application</h4>
+                            <p>Complete and submit the application form along with all required documents and application fee.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">Step 2: Entrance Assessment</h4>
+                            <p>Candidates will be invited to sit for an entrance assessment to determine academic readiness.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">Step 3: Interview</h4>
+                            <p>Successful candidates and their parents/guardians will be invited for an interview with school officials.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">Step 4: Offer of Place</h4>
+                            <p>Candidates who meet all requirements will receive an offer of admission.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">Step 5: Acceptance & Payment</h4>
+                            <p>Accept the offer by paying the required fees within the specified timeframe.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-lg">Step 6: Orientation</h4>
+                            <p>New students will participate in an orientation program before the start of the academic term.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white p-4 rounded-lg border border-gray-200">
+                    <h4 class="font-semibold text-lg mb-2">Fees & Tuition</h4>
+                    <p class="mb-4">
+                        For detailed information about our fee structure, please contact our Admissions Office.
+                    </p>
+                    <div class="flex items-center text-primary">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="https://page.genspark.site/cdn-cgi/l/email-protection#debfbab3b7adadb7b1b0ad9eb3bdbdf0bfbdf0a4a9" class="hover:underline"><span class="__cf_email__" data-cfemail="0160656c687272686e6f72416c62622f60622f7b76">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boarding Life Section -->
+    <section id="boarding" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Boarding Life</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="md:w-1/2">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/Kestrel-house-sign-DSC_0309.jpg" alt="Kestrel House" class="rounded-lg shadow-lg w-full h-80 object-cover mb-4">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/Boys-Hostel-IMG_3483.jpg" alt="Boys Hostel" class="rounded-lg shadow-lg w-full h-80 object-cover">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">A Home Away From Home</h3>
+                    <p class="mb-4">
+                        Midlands Christian College offers both day school and boarding places, with boarders forming the majority of our intake. Our boarding facilities provide a supportive, structured environment that balances academic focus with personal development.
+                    </p>
+                    <p class="mb-4">
+                        Located on campus, Eagle House, Kestrel House and Oasis offer full boarding to pupils from Form 1 to Upper 6. Students are accommodated either in dormitory-style or shared room accommodation, supervised by full-time hostel supervisors and duty staff who care for the pupils' needs.
+                    </p>
+                    <p class="mb-4">
+                        Our hostels are run by Christian staff who uphold the rules by which the College is run and teach Christian principles. These hostels have structured programmes which ensure adequate study time, spiritual input, a reasonable bed time, and time to relax.
+                    </p>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-md mt-6">
+                        <h4 class="font-semibold text-lg mb-3">Boarding Facilities Include:</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-bed text-primary mr-2"></i>
+                                <span>Comfortable accommodations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-primary mr-2"></i>
+                                <span>Nutritious meals</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-book text-primary mr-2"></i>
+                                <span>Supervised study periods</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-wifi text-primary mr-2"></i>
+                                <span>Internet facilities</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-heartbeat text-primary mr-2"></i>
+                                <span>Health center</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tv text-primary mr-2"></i>
+                                <span>Recreational areas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-6 text-primary">Boarding Life Experience</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4 class="font-semibold">Daily Schedule</h4>
+                        </div>
+                        <ul class="space-y-2 pl-4">
+                            <li class="flex justify-between">
+                                <span>Wake-up</span>
+                                <span class="text-gray-600">5:30 AM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Breakfast</span>
+                                <span class="text-gray-600">6:30 AM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Classes</span>
+                                <span class="text-gray-600">7:30 AM - 3:30 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sports/Activities</span>
+                                <span class="text-gray-600">3:35 PM - 4:55 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Dinner</span>
+                                <span class="text-gray-600">5:30 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Study Time</span>
+                                <span class="text-gray-600">6:30 PM - 8:30 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Lights Out</span>
+                                <span class="text-gray-600">9:30 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h4 class="font-semibold">Pastoral Care</h4>
+                        </div>
+                        <p class="mb-3">
+                            Our boarding staff provide comprehensive pastoral care to ensure students' emotional and social wellbeing.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Experienced hostel supervisors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Regular check-ins with students</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Counseling services available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Shadow group support system</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Regular communication with parents</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="font-semibold">Health & Wellbeing</h4>
+                        </div>
+                        <p class="mb-3">
+                            The health and wellbeing of our boarding students is a top priority at MCC.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Fully equipped health center</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Qualified medical staff</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Weekly doctor visits</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Nutritious, balanced meals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Physical activity programs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-secondary text-primary rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <h4 class="font-semibold">Boarding at MCC</h4>
+                    </div>
+                    <blockquote class="italic pl-4 border-l-4 border-secondary">
+                        "Our boarding program is designed to create a family atmosphere where students develop independence, resilience, and lifelong friendships while receiving the support they need to excel academically, socially, and spiritually."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Section -->
+    <section id="sports" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Sports Programme</h2>
+            
+            <div class="mb-8 text-center">
+                <p class="text-lg md:w-2/3 mx-auto mb-8">
+                    Sport at MCC provides the opportunity, not only to be physically and mentally fit, but to also practise team-work, 
+                    decision making under pressure, discipline, how to win and lose, and how to have fun. Pupils must do at least two sports 
+                    per term which will take up to four afternoons a week from 3:35pm to 4:55pm.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="card">
+                        <div class="bg-primary py-4 px-6 rounded-t-lg">
+                            <h3 class="text-xl font-semibold text-white">Term 1 Sports</h3>
+                        </div>
+                        <div class="p-6">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/Sports-Day-19.jpg" alt="Term 1 Sports" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-running text-primary mr-2"></i>
+                                    <span>Athletics</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-basketball-ball text-primary mr-2"></i>
+                                    <span>Basketball</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-baseball-ball text-primary mr-2"></i>
+                                    <span>Cricket</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-running text-primary mr-2"></i>
+                                    <span>Cross Country</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-swimming-pool text-primary mr-2"></i>
+                                    <span>Swimming</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-table-tennis text-primary mr-2"></i>
+                                    <span>Tennis</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-volleyball-ball text-primary mr-2"></i>
+                                    <span>Volleyball</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="bg-primary py-4 px-6 rounded-t-lg">
+                            <h3 class="text-xl font-semibold text-white">Term 2 Sports</h3>
+                        </div>
+                        <div class="p-6">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/DSC_3268.jpg" alt="Term 2 Sports" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-hockey-puck text-primary mr-2"></i>
+                                    <span>Hockey</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-basketball-ball text-primary mr-2"></i>
+                                    <span>Girls Basketball</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-basketball-ball text-primary mr-2"></i>
+                                    <span>Netball</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-football-ball text-primary mr-2"></i>
+                                    <span>Rugby</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-futbol text-primary mr-2"></i>
+                                    <span>Senior Boys Soccer</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-volleyball-ball text-primary mr-2"></i>
+                                    <span>Volleyball</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="bg-primary py-4 px-6 rounded-t-lg">
+                            <h3 class="text-xl font-semibold text-white">Term 3 Sports</h3>
+                        </div>
+                        <div class="p-6">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Sport-Swimming-Physically-Active-Lifestyle-DSC_0010.jpg" alt="Term 3 Sports" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-basketball-ball text-primary mr-2"></i>
+                                    <span>Basketball</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-baseball-ball text-primary mr-2"></i>
+                                    <span>Cricket</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-swimming-pool text-primary mr-2"></i>
+                                    <span>Swimming</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-table-tennis text-primary mr-2"></i>
+                                    <span>Tennis</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-volleyball-ball text-primary mr-2"></i>
+                                    <span>Volleyball</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-6 text-primary">Sports Achievements & Facilities</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-trophy text-secondary mr-2"></i>
+                            Sports Achievements
+                        </h4>
+                        <p class="mb-4">
+                            Our students regularly compete and excel at district, provincial, and national levels in various sports. Many of our alumni have gone on to represent Zimbabwe in international competitions.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-medal text-secondary mr-2 mt-1"></i>
+                                <span>Regular winners at ACSI Athletics Invitationals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-medal text-secondary mr-2 mt-1"></i>
+                                <span>National representation in swimming, cricket, and basketball</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-medal text-secondary mr-2 mt-1"></i>
+                                <span>Provincial champions in multiple sports</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-medal text-secondary mr-2 mt-1"></i>
+                                <span>Regular participants in international school competitions</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-running text-secondary mr-2"></i>
+                            Sports Facilities
+                        </h4>
+                        <p class="mb-4">
+                            MCC boasts excellent sporting facilities that enable our students to train and compete at a high level.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Modern swimming pool</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Multiple sports fields for rugby, soccer, and hockey</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Tennis courts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Athletics track</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Indoor sports hall for basketball, volleyball, and other activities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Cricket nets and field</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="italic text-lg">
+                        "As a school, we travel around the country attending various extra mural activities. Our pupils also have the chance to be considered for national selection for most sports, with pupils being selected annually. A number of our Sports Department Staff also serve on national teams in coaching and managerial capacities."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Programs Section -->
+    <section id="culture" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Cultural Programme</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="md:w-1/2">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Clubs-Marimba-DSC_0269.jpg" alt="Cultural Program" class="rounded-lg shadow-lg w-full h-96 object-cover">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Explore Your Talents</h3>
+                    <p class="mb-4">
+                        With a diverse selection of club options, pupils can pursue their interests as well as have the opportunity to be exposed to new things. The club programme runs on one day a week.
+                    </p>
+                    <p class="mb-4">
+                        Midlands Christian College is proud to associate with the National Institute of Allied Arts, particularly as the venue for the Midlands portion of both the Vocal and Instrumental Festival and the Speech and Drama Festival. Our pupils also have opportunities through various other associations we work with to explore and develop their cultural 'prowess'.
+                    </p>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-md mt-6">
+                        <h4 class="font-semibold text-lg mb-3">Clubs Offered Include:</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-music text-primary mr-2"></i>
+                                <span>Assembly Music</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-guitar text-primary mr-2"></i>
+                                <span>Band</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-chess text-primary mr-2"></i>
+                                <span>Chess</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-microphone text-primary mr-2"></i>
+                                <span>Choir</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-laptop-code text-primary mr-2"></i>
+                                <span>Computer Architecture</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-comments text-primary mr-2"></i>
+                                <span>Debate</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-pray text-primary mr-2"></i>
+                                <span>Discipleship</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-theater-masks text-primary mr-2"></i>
+                                <span>Drama</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tshirt text-primary mr-2"></i>
+                                <span>Fashion Designing</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-first-aid text-primary mr-2"></i>
+                                <span>First Aid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Club-Band-IMG_9539.jpg" alt="Music Program" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h4 class="font-semibold text-lg mb-3">Music Program</h4>
+                        <p class="mb-4">
+                            Our music program offers students the opportunity to develop their musical talents through various ensembles and individual instruction.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Choir performances at school and community events</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Band participation in local and regional competitions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Marimba group showcasing traditional Zimbabwean music</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Music theory examinations for all junior pupils</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Clubs-Environmental-Club-Responsible-Citizens-DSC_0540.jpg" alt="Environmental Club" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h4 class="font-semibold text-lg mb-3">Special Interest Clubs</h4>
+                        <p class="mb-4">
+                            Our special interest clubs allow students to explore specific areas of interest and develop new skills.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>German language and culture</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Wildlife & Environmental Management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Robotics and technology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Math Olympiad for competitive problem-solving</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Operation Maintenance for practical skills</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Clubs-Blood-Donation-Responsible-Citizen-DSC_0393.jpg" alt="Community Service" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h4 class="font-semibold text-lg mb-3">Service & Leadership</h4>
+                        <p class="mb-4">
+                            Our Interact and Social Welfare Clubs actively portray the Great Command and the Great Commission through their outreach to our local community.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Visits to local children's homes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Support for juvenile correctional facilities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Outreach to old age homes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Visitation programs at the local prison</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Community blood donation drives</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-6 text-primary text-center">Cultural Events Calendar</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th class="py-3 px-4 text-left">Event</th>
+                                <th class="py-3 px-4 text-left">Term</th>
+                                <th class="py-3 px-4 text-left">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-3 px-4">Arts Festival</td>
+                                <td class="py-3 px-4">Term 1</td>
+                                <td class="py-3 px-4">Annual showcase of visual arts, music, and drama performances</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">National Institute of Allied Arts Festival</td>
+                                <td class="py-3 px-4">Term 1</td>
+                                <td class="py-3 px-4">Vocal and Instrumental competition held at MCC for the Midlands region</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Speech and Drama Festival</td>
+                                <td class="py-3 px-4">Term 2</td>
+                                <td class="py-3 px-4">Competition focusing on public speaking, poetry, and theatrical performances</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Inter-House Music Competition</td>
+                                <td class="py-3 px-4">Term 2</td>
+                                <td class="py-3 px-4">Friendly competition between school houses showcasing musical talents</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Cultural Exchange Day</td>
+                                <td class="py-3 px-4">Term 3</td>
+                                <td class="py-3 px-4">Celebration of cultural diversity with food, music, dance, and traditional attire</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Annual School Production</td>
+                                <td class="py-3 px-4">Term 3</td>
+                                <td class="py-3 px-4">Major theatrical or musical production involving students from all forms</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual Life Section -->
+    <section id="spiritual" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Spiritual Life</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Our Christian Foundation</h3>
+                    <p class="mb-4">
+                        As a Christian school, we are committed to nurturing the spiritual development of our students alongside their academic growth. The Life Skills and Counselling Department oversee this important aspect of the College, both for the school as a whole and for individuals in need of specific support.
+                    </p>
+                    <p class="mb-4">
+                        Our spiritual program is designed to help students understand and live out Christian values in their daily lives, developing a personal relationship with God and learning to serve others with compassion and integrity.
+                    </p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md mt-8">
+                        <h4 class="font-semibold text-lg mb-4">Biblical Foundation</h4>
+                        <p class="italic mb-4">
+                            "For I was hungry and you gave me something to eat, I was thirsty and you gave me something to drink, I was a stranger and you invited me in, I was naked and you clothed Me, I was sick and you looked after Me, I was in prison and you visited me."
+                        </p>
+                        <p class="text-right">- Matthew 25:35-36</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/11/Spititual-Confident-Team-Player-IMG_8410.jpg" alt="Spiritual Life" class="rounded-lg shadow-lg w-full h-80 object-cover mb-4">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/11/Spiritual-Victoria-Falls-Adventures-P1180341.jpg" alt="Spiritual Retreat" class="rounded-lg shadow-lg w-full h-60 object-cover">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card">
+                    <div class="bg-primary py-4 px-6 rounded-t-lg">
+                        <h3 class="text-xl font-semibold text-white">Daily Devotions</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">
+                            This is an important time in our programme – both at school and at hostel – where daily, pupils get to share and reflect on the Word of God. Form Teachers and Hostel Staff coordinate this time under the Life Skills and Counselling Department.
+                        </p>
+                        <div class="flex items-center mt-6">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">Morning Devotions</h5>
+                                <p class="text-sm text-gray-600">Daily with Form Teachers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-3">
+                            <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold">Evening Devotions</h5>
+                                <p class="text-sm text-gray-600">Daily in Hostels</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="bg-primary py-4 px-6 rounded-t-lg">
+                        <h3 class="text-xl font-semibold text-white">Biblical Studies</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="mb-4">
+                            Education for Living – Biblical Studies forms part of our main curriculum with lessons timetabled like an academic subject. Topical issues are discussed, practical strategies are given, support is offered and study of the Bible is done. All pupils attend these lessons.
+                        </p>
+                        <div class="bg-gray-50 p-3 rounded-lg mt-4">
+                            <h5 class="font-semibold mb-2">Key Focus Areas:</h5>
+                            <ul class="space-y-1">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                                    <span>Biblical principles for daily life</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                                    <span>Character development</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                                    <span>Ethical decision making</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                                    <span>Relationships and community</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="bg-primary py-4 px-6 rounded-t-lg">
+                        <h3 class="text-xl font-semibold text-white">Support Systems</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <h4 class="font-semibold mb-2">Shadow Groups</h4>
+                            <p>
+                                Based on the principle found in Acts 5:15-16, every pupil in the College selects a member of staff whose shadow they will fall under – boys choosing a male member of staff and girls choosing a female member of staff. These resultant groups bond and become a close-knit support for each other through the ups and downs of life as they also grow together in the ways of the Lord.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Hostel Church</h4>
+                            <p>
+                                Boarders attend Hostel Church in the school hall on Sunday mornings. There is a time of Praise and Worship as well as prayer. Guest Pastors and speakers are invited to come and share with our pupils and dovetails with our Biblical Studies programme.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-6 text-primary text-center">Spiritual Growth Opportunities</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-praying-hands"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Prayer Groups</h4>
+                                <p>
+                                    Students have the opportunity to join regular prayer groups to support one another and grow in their faith together.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Service Projects</h4>
+                                <p>
+                                    Regular opportunities for students to put their faith into action through service to the local community and beyond.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-church"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Church Partnerships</h4>
+                                <p>
+                                    We maintain strong relationships with local churches to provide additional spiritual support for our students and families.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-campground"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Spiritual Retreats</h4>
+                                <p>
+                                    Annual retreats that provide focused time for spiritual growth, reflection, and community building.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Christian Clubs</h4>
+                                <p>
+                                    Special interest clubs like Discipleship and Intercession that focus specifically on spiritual development.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Worship Teams</h4>
+                                <p>
+                                    Students can participate in worship teams that lead music during school assemblies and Hostel Church services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="italic text-lg">
+                        "We are committed to nurturing the whole child - mind, body, and spirit - preparing them not just for academic success but for a life of purpose, faith, and service."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Media Section -->
+    <section id="news" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">News & Media</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card news-card">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/Sports-Day-11-1-scaled-1366x520.jpg" alt="Sports Day" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="news-card-content">
+                        <div class="news-date mb-2">September 27, 2024</div>
+                        <h3 class="text-xl font-semibold mb-2">Annual Speech and Prize Giving Day</h3>
+                        <p class="mb-4">
+                            On Friday, the 27th of September, we held our 37th Annual Speech and Prize Giving Day, celebrating our students' achievements throughout the academic year.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline flex items-center mt-auto">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card news-card">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Clubs-Blood-Donation-Responsible-Citizen-DSC_0393.jpg" alt="ACSI Athletics" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="news-card-content">
+                        <div class="news-date mb-2">March 29, 2024</div>
+                        <h3 class="text-xl font-semibold mb-2">ACSI Athletics Invitational</h3>
+                        <p class="mb-4">
+                            Congratulations to Eaglesvale School for winning the ACSI Athletics Invitational hosted at Midlands Christian College this weekend!
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline flex items-center mt-auto">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card news-card">
+                    <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/11/Collaborative-Learning-DSC_0122.jpg" alt="Form 1 Enrollment" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="news-card-content">
+                        <div class="news-date mb-2">June 2, 2024</div>
+                        <h3 class="text-xl font-semibold mb-2">2025 Form 1 Enrollment Now Open</h3>
+                        <p class="mb-4">
+                            Become an MCC Eagle. 2025 Form 1 enrollment is underway! Get in touch with us for more details or download application forms from our website.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline flex items-center mt-auto">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-primary">Upcoming Events</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-primary text-white rounded-lg flex flex-col items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-xs">OCT</span>
+                                <span class="text-xl font-bold">15</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Open Day</h4>
+                                <p class="text-sm text-gray-600 mb-2">9:00 AM - 3:00 PM</p>
+                                <p>
+                                    Prospective students and families are invited to tour our campus and learn about our programs.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-primary text-white rounded-lg flex flex-col items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-xs">OCT</span>
+                                <span class="text-xl font-bold">28</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Parent-Teacher Conferences</h4>
+                                <p class="text-sm text-gray-600 mb-2">2:00 PM - 6:00 PM</p>
+                                <p>
+                                    Term 3 parent-teacher conferences to discuss student progress.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-primary text-white rounded-lg flex flex-col items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-xs">NOV</span>
+                                <span class="text-xl font-bold">10</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Annual School Production</h4>
+                                <p class="text-sm text-gray-600 mb-2">6:00 PM - 8:30 PM</p>
+                                <p>
+                                    Join us for our annual school production showcasing our students' dramatic and musical talents.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-primary text-white rounded-lg flex flex-col items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-xs">DEC</span>
+                                <span class="text-xl font-bold">02</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Year-End Ceremony</h4>
+                                <p class="text-sm text-gray-600 mb-2">10:00 AM - 12:00 PM</p>
+                                <p>
+                                    Closing ceremony to celebrate the achievements of the academic year.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">Photo Gallery</h3>
+                    
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/Sports-Day-19.jpg" alt="Sports Day">
+                            <div class="gallery-caption">Sports Day</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2024/10/DSC_3268.jpg" alt="Hockey Match">
+                            <div class="gallery-caption">Hockey Match</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Sport-Swimming-Physically-Active-Lifestyle-DSC_0010.jpg" alt="Swimming">
+                            <div class="gallery-caption">Swimming Competition</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Clubs-Marimba-DSC_0269.jpg" alt="Marimba Club">
+                            <div class="gallery-caption">Marimba Club</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/10/Club-Band-IMG_9539.jpg" alt="School Band">
+                            <div class="gallery-caption">School Band</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../i0.wp.com/www.mcc.ac.zw/wp-content/uploads/2017/11/Collaborative-Learning-DSC_0122.jpg" alt="Classroom Learning">
+                            <div class="gallery-caption">Collaborative Learning</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">Connect With Us</h3>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-4">Stay Updated</h4>
+                        <p class="mb-4">
+                            Subscribe to our newsletter to receive the latest news and updates from Midlands Christian College.
+                        </p>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <button type="submit" class="btn-primary w-full">Subscribe</button>
+                        </form>
+                        
+                        <div class="mt-6">
+                            <h5 class="font-semibold mb-3">Follow Us</h5>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/MidlandsChristianCollegeEagles/" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/midlandschristiancollege/" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl text-center mb-12">Contact Us</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">Get In Touch</h3>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="font-semibold mb-1">Address</h4>
+                            <p>PO Box 1242, Long Road, New Christmas Gift,<br>Gweru, Zimbabwe</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="font-semibold mb-1">Phone</h4>
+                            <p>+263 254 222 4930<br>+263 54 223 153<br>+263 54 220 905</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="font-semibold mb-1">Email</h4>
+                            <p><a href="https://page.genspark.site/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b4a4f4642456b464848054a4805515c">[email&#160;protected]</a><br><a href="https://page.genspark.site/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="157471787c66667c7a7b66557876763b74763b6f62">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="font-semibold mb-1">Office Hours</h4>
+                            <p>Monday - Friday: 7:30 AM - 4:00 PM<br>Saturday: 8:00 AM - 12:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-3">Map Location</h4>
+                        <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-600">Interactive Map Would Be Displayed Here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">Send a Message</h3>
+                    
+                    <form class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                <input type="text" id="contact-name" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                <input type="email" id="contact-email" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="contact-phone" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                            <div>
+                                <label for="contact-subject" class="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
+                                <input type="text" id="contact-subject" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                            <textarea id="contact-message" rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                    
+                    <div class="mt-8 bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-4">Frequently Asked Questions</h4>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold cursor-pointer flex justify-between items-center accordion-header">
+                                    <span>What are the admission requirements?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </h5>
+                                <div class="accordion-content">
+                                    <p>
+                                        Admission is usually by assessment test in the first instance. This helps the staff in determining the maturity, potential and present level of achievement of the child. Please visit our Admissions page for detailed requirements.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold cursor-pointer flex justify-between items-center accordion-header">
+                                    <span>What are the school fees?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </h5>
+                                <div class="accordion-content">
+                                    <p>
+                                        For detailed information about our fee structure, please contact our Admissions Office at <a href="https://page.genspark.site/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="afcecbc2c6dcdcc6c0c1dcefc2cccc81cecc81d5d8">[email&#160;protected]</a> with indication as to what form you are interested in knowing more about and whether you're interested in boarding or day scholar options.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold cursor-pointer flex justify-between items-center accordion-header">
+                                    <span>Does the school provide transportation?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </h5>
+                                <div class="accordion-content">
+                                    <p>
+                                        The school offers transportation services for day scholars from select areas around Gweru. Please contact the administration office for routes and fees.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold cursor-pointer flex justify-between items-center accordion-header">
+                                    <span>What curriculum does the school follow?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </h5>
+                                <div class="accordion-content">
+                                    <p>
+                                        The school offers a broad curriculum with examinations under Cambridge, ZIMSEC, DELF DALF, HSK (Chinese), and London College of Music. All pupils also sit for the International Computer Driving Licence (ICDL).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">About MCC</h3>
+                    <p class="mb-4">
+                        Midlands Christian College is a private, internationally accredited, co-educational Christian high school located in Gweru, Zimbabwe. Since 1987, we've been providing quality education based on Christian principles.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/MidlandsChristianCollegeEagles/" class="text-white hover:text-secondary">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/midlandschristiancollege/" class="text-white hover:text-secondary">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> About Us
+                        </a></li>
+                        <li><a href="#academics" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> Academics
+                        </a></li>
+                        <li><a href="#admissions" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> Admissions
+                        </a></li>
+                        <li><a href="#boarding" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> Boarding Life
+                        </a></li>
+                        <li><a href="#sports" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> Sports
+                        </a></li>
+                        <li><a href="#culture" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> Cultural Programs
+                        </a></li>
+                        <li><a href="#spiritual" class="text-white hover:text-secondary flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs"></i> Spiritual Life
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>PO Box 1242, Long Road, New Christmas Gift,<br>Gweru, Zimbabwe</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+263 254 222 4930<br>+263 54 223 153</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span><a href="https://page.genspark.site/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aacbcec7c3c4eac7c9c984cbc984d0dd">[email&#160;protected]</a></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Our Affiliations</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Association of Trust Schools (ATS)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Association of Christian Schools International (ACSI)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Cambridge International Examinations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>ZIMSEC</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Midlands Christian College. All Rights Reserved.</p>
+                </div>
+                <div>
+                    <a href="#" class="text-white hover:text-secondary mr-4">Privacy Policy</a>
+                    <a href="#" class="text-white hover:text-secondary">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero Slider
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                heroSlides.forEach(slide => slide.classList.remove('active'));
+                heroSlides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % heroSlides.length;
+                showSlide(currentSlide);
+            }
+            
+            setInterval(nextSlide, 5000);
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const closeMenu = document.querySelector('.close-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+            });
+            
+            closeMenu.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+            
+            // Mobile Menu Links
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Fixed Header on Scroll
+            const header = document.querySelector('header');
+            const backToTop = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('navbar-fixed');
+                    backToTop.classList.remove('opacity-0', 'invisible');
+                    backToTop.classList.add('opacity-100', 'visible');
+                } else {
+                    header.classList.remove('navbar-fixed');
+                    backToTop.classList.add('opacity-0', 'invisible');
+                    backToTop.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            // Back to Top
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Accordion
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('active');
+                    
+                    const icon = this.querySelector('i');
+                    if (content.classList.contains('active')) {
+                        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                    } else {
+                        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                    }
+                });
+            });
+            
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                        window.scrollTo({
+                            top: targetPosition - headerHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+<!-- Mirrored from page.genspark.site/page/toolu_011KZoGoRUkADvs4PdZptfCN/midlands_christian_college_website.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 10:44:33 GMT -->
+</html>
